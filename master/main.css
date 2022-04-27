@@ -1139,7 +1139,7 @@ a.loading_1jKXs {
     font-weight: 400;
 
     display: block;
-    margin-top: var(--gap-2xs);
+    margin-top: 6px;
     padding: var(--form-control-sub-paddings);
 }
 .block_1XFyL {
@@ -1153,7 +1153,7 @@ a.loading_1jKXs {
     padding: var(--form-control-labeled-s-paddings);
 }
 .s_31hqU .label_2Y7gw {
-    top: calc(var(--form-control-s-min-height) / 2 + 1px);
+    top: calc(var(--form-control-s-min-height) / 2 + 1.5px);
 }
 .m_WLmpf .inner_1oxNk {
     min-height: var(--form-control-m-min-height);
@@ -1162,7 +1162,7 @@ a.loading_1jKXs {
     padding: var(--form-control-labeled-m-paddings);
 }
 .m_WLmpf .label_2Y7gw {
-    top: calc(var(--form-control-m-min-height) / 2);
+    top: calc(var(--form-control-m-min-height) / 2 + 2.5px);
 }
 .l_3yfY1 .inner_1oxNk {
     min-height: var(--form-control-l-min-height);
@@ -1171,7 +1171,7 @@ a.loading_1jKXs {
     padding: var(--form-control-labeled-l-paddings);
 }
 .l_3yfY1 .label_2Y7gw {
-    top: calc(var(--form-control-l-min-height) / 2);
+    top: calc(var(--form-control-l-min-height) / 2 + 2.5px);
 }
 .xl_1HYQa .inner_1oxNk {
     min-height: var(--form-control-xl-min-height);
@@ -1201,10 +1201,10 @@ a.loading_1jKXs {
     padding-right: var(--gap-s);
 }
 .xl_1HYQa .sub_AzZDb {
-    margin-top: var(--gap-xs);
+    margin-top: 6px;
 }
 .xl_1HYQa .label_2Y7gw {
-    top: calc(var(--form-control-xl-min-height) / 2 - 1px);
+    top: calc(var(--form-control-xl-min-height) / 2 + 0.5px);
 }
 /* DISABLED STATE */
 .disabled_3x-x_ {
