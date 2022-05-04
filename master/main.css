@@ -431,7 +431,9 @@ a.loading_1jKXs {
 }
 /* Nowrap */
 .nowrap_CzYoa {
+    overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
 }
 /* IE min-height fix */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
