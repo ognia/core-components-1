@@ -15792,6 +15792,7 @@ input:focus:not(:read-only) + .suffixContainer_3UK5m,
 .toastPlate_1yQmS {
     -webkit-box-shadow: var(--toast-box-shadow);
             box-shadow: var(--toast-box-shadow);
+    word-break: break-all;
 }
 .popoverInner_cKuog {
     border: none;
