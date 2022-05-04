@@ -431,7 +431,9 @@ a.loading_1jKXs {
 }
 /* Nowrap */
 .nowrap_CzYoa {
+    overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
 }
 /* IE min-height fix */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -5013,6 +5015,17 @@ input:focus:not(:read-only) + .suffixContainer_3UK5m,
 .input_28uMN.disabled_1puvC {
         color: var(--color-light-text-tertiary);
         opacity: 1;
+    }
+.input_28uMN:-webkit-autofill {
+        -webkit-text-fill-color: var(--code-input-text-color);
+    }
+.input_28uMN:-webkit-autofill,
+    .input_28uMN:-webkit-autofill:hover,
+    .input_28uMN:-webkit-autofill:focus,
+    .input_28uMN:-webkit-autofill:active {
+        /* Hack from http://stackoverflow.com/a/29350537 */
+        -webkit-transition: background-color 999999s ease-in-out 0s;
+        transition: background-color 999999s ease-in-out 0s;
     }
 .compact_1OQXU {
     width: 28px;
