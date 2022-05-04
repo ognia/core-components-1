@@ -86,7 +86,7 @@ export type FileUploadItemProps = {
     /**
      * Компонент кастомной иконки
      */
-    icon?: ElementType<{ className?: string }>;
+    icon?: ElementType<{ className?: string }> | JSX.Element;
 
     /**
      * Обработчик загрузки файла
@@ -115,13 +115,13 @@ export const FileUploadItem: React.FC<FileUploadItemProps> = ({
     id = '0',
     name = '',
     size,
-    icon: Icon = fileIcon(name),
+    icon,
     uploadDate,
     downloadLink,
     download,
     uploadStatus,
     uploadPercent = 0,
-    error = uploadStatus === 'ERROR' ? 'Не удалось загрузить файл' : undefined,
+    error,
     showDelete,
     showRestore,
     onDelete,
@@ -165,23 +165,29 @@ export const FileUploadItem: React.FC<FileUploadItemProps> = ({
                     </div>
                 );
             default: {
-                return <Icon className={styles.icon} />;
+                const Icon = fileIcon(name);
+
+                return icon || <Icon className={styles.icon} />;
             }
         }
-    }, [showRestore, uploadStatus]);
+    }, [name, icon, showRestore, uploadStatus]);
 
     const renderInfoSection = useCallback(
-        () => (
-            <div className={styles.infoSection}>
-                <div className={styles.name}>{name}</div>
+        () => {
+            const text = uploadStatus === 'ERROR' ? 'Не удалось загрузить файл' : error;
 
-                {uploadStatus === 'ERROR' && error && (
+            return (
+                <div className={styles.infoSection}>
+                    <div className={styles.name}>{name}</div>
+
+                    { error && (
                     <div className={styles.errorWrapper} role='alert'>
-                        {error}
+                        {text}
                     </div>
                 )}
-            </div>
-        ),
+                </div>
+            );
+        },
         [name, uploadStatus, error],
     );
 
